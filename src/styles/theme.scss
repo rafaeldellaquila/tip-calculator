@@ -1,0 +1,18 @@
+//SpaceMono import
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+//Primaries
+$color-cyan: hsl(172, 67%, 45%);
+//Neutrals
+$dark-cyan: hsl(183, 100%, 15%);
+$dark-lighter-cyan: hsl(186, 14%, 43%);
+$light-darker-cyan: hsl(184, 14%, 56%);
+$light-grey-cyan: hsl(185, 41%, 84%);
+$neutral-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+//fonts
+
+//font-family
+$font-400: 400 24px 'Space Mono', monospace;
+$font-700: 700 24px 'Space Mono', monospace;
