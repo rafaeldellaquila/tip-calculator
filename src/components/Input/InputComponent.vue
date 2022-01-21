@@ -1,5 +1,10 @@
 <template>
-    <input type="number" :class="this.name" :name="name" placeholder="0" />
+    <input
+        type="number"
+        :class="this.name"
+        :name="name"
+        :placeholder="this.name == 'custom' ? 'Custom' : 0"
+    />
 </template>
 
 <script>
@@ -56,5 +61,14 @@ input {
 
 .people {
     background-image: url('../../assets/icon-person.svg');
+}
+
+.custom {
+    padding: 10px 35px;
+    &::placeholder {
+        color: $dark-lighter-cyan;
+        font-family: $font-700;
+        font-weight: bold;
+    }
 }
 </style>

@@ -1,5 +1,7 @@
 <template>
-    <button type="button" :value="this.value">{{ this.title }}</button>
+    <button class="tips" type="button" :value="this.value">
+        {{ this.title }}
+    </button>
 </template>
 
 <script>
@@ -15,4 +17,13 @@ export default {
 
 <style scoped lang="scss">
 @import '../../styles/theme.scss';
+
+.tips {
+    background-color: $dark-cyan;
+    border: none;
+    color: $white;
+    font: $font-400;
+    padding: 10px 35px;
+    border-radius: 6px;
+}
 </style>

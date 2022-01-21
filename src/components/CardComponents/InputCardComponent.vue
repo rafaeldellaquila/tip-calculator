@@ -2,12 +2,16 @@
     <legend>Bill</legend>
     <input-component name="bill" />
     <legend>Select Tip %</legend>
-    <button-component
-        v-for="(value, index) in tipValues"
-        :value="value.value"
-        :title="value.name"
-        :key="index"
-    />
+    <section>
+        <button-component
+            v-for="(tip, index) in tipValues"
+            :value="tip.value"
+            :title="tip.name"
+            :key="index"
+            @click="this.handleTips(tip.value)"
+        />
+        <input-component name="custom" />
+    </section>
     <legend>Number of People</legend>
     <input-component name="people" />
 </template>
@@ -16,7 +20,7 @@
 import ButtonComponent from '../Button/ButtonComponent.vue'
 import InputComponent from '../Input/InputComponent.vue'
 
-const tipValues = [
+const StandardTipValues = [
     {
         name: '5%',
         value: 5,
@@ -37,20 +41,22 @@ const tipValues = [
         name: '50%',
         value: 50,
     },
-    {
-        name: 'Custom',
-        value: null,
-    },
 ]
 
 export default {
     components: { InputComponent, ButtonComponent },
     name: 'InputCardComponent',
 
-    setup() {
-        return {
-            ButtonComponent: tipValues,
-        }
+    computed: {
+        tipValues: () => {
+            return StandardTipValues
+        },
+    },
+
+    methods: {
+        handleTips(value) {
+            return console.log(value)
+        },
     },
 }
 </script>
