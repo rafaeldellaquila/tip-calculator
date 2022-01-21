@@ -1,19 +1,21 @@
 <template>
-    <legend>Bill</legend>
-    <input-component name="bill" />
-    <legend>Select Tip %</legend>
-    <section>
-        <button-component
-            v-for="(tip, index) in tipValues"
-            :value="tip.value"
-            :title="tip.name"
-            :key="index"
-            @click="this.handleTips(tip.value)"
-        />
-        <input-component name="custom" />
+    <section class="input-card">
+        <h2>Bill</h2>
+        <input-component name="bill" />
+        <h2>Select Tip %</h2>
+        <section>
+            <button-component
+                v-for="(tip, index) in tipValues"
+                :value="tip.value"
+                :title="tip.name"
+                :key="index"
+                @click="this.handleTips(tip.value)"
+            />
+            <input-component name="custom" />
+        </section>
+        <h2>Number of People</h2>
+        <input-component name="people" />
     </section>
-    <legend>Number of People</legend>
-    <input-component name="people" />
 </template>
 
 <script>
@@ -64,7 +66,7 @@ export default {
 <style scoped lang="scss">
 @import '../../styles/theme.scss';
 
-legend {
+h2 {
     font: $font-700;
     text-transform: capitalize;
     color: $dark-cyan;
