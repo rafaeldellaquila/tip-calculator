@@ -1,7 +1,8 @@
 <template>
-    <h1>CardComponent</h1>
-    <input-card-component />
-    <result-card-component />
+    <section class="main-card">
+        <input-card-component />
+        <result-card-component />
+    </section>
 </template>
 
 <script>
