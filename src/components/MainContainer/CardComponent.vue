@@ -18,4 +18,15 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@import '../../styles/theme.scss';
+
+.main-card {
+    background-color: $white;
+    border-radius: 24px;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+</style>

@@ -1,6 +1,8 @@
 <template>
-    <img alt="Vue logo" src="./assets/logo.svg" />
-    <card-component />
+    <main>
+        <img alt="Vue logo" width="62" src="./assets/logo.svg" />
+        <card-component />
+    </main>
 </template>
 
 <script>
@@ -14,4 +16,24 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import './styles/theme.scss';
+body {
+    #app {
+        background-color: $light-grey-cyan;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-content: center;
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}
+</style>

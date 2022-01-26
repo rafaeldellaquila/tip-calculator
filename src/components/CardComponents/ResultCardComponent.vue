@@ -1,7 +1,9 @@
 <template>
     <section class="result-card">
-        <tip-amount-component name="tip amount" :valueTip="0.15" />
-        <tip-amount-component name="total" :totalValue="0.2" />
+        <section class="results">
+            <tip-amount-component name="tip amount" :valueTip="0.15" />
+            <tip-amount-component name="total" :totalValue="0.2" />
+        </section>
         <button-component title="reset" disabled />
     </section>
 </template>
@@ -24,5 +26,12 @@ export default {
 
 .result-card {
     background-color: $dark-cyan;
+    padding: 50px 40px 40px 40px;
+    border-radius: 15px;
+    max-width: 410px;
+
+    .results {
+        margin-bottom: 90px;
+    }
 }
 </style>

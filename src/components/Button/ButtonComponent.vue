@@ -1,11 +1,18 @@
 <template>
-    <button
-        :class="this.title != 'reset' ? 'tips' : 'reset'"
-        type="button"
-        :value="this.value"
-    >
-        {{ this.title }}
-    </button>
+    <template v-if="this.title == 'reset' || this.title != 'custom'">
+        <button
+            :class="this.title != 'reset' ? 'tips' : 'reset'"
+            type="button"
+            :value="this.value"
+        >
+            {{ this.title }}
+        </button>
+    </template>
+    <template v-else>
+        <button class="custom" type="button" :value="this.value">
+            {{ this.title }}
+        </button>
+    </template>
 </template>
 
 <script>
@@ -28,12 +35,14 @@ button {
     border: none;
     border-radius: 6px;
     text-transform: uppercase;
+    font-size: 20px;
 }
 
 .tips {
     background-color: $dark-cyan;
     color: $white;
-    padding: 10px 35px;
+    padding: 8px 30px;
+    max-width: 115px;
 }
 
 .reset {
@@ -47,5 +56,13 @@ button {
         opacity: 0.2;
         cursor: no-drop;
     }
+}
+
+.custom {
+    background-color: $neutral-cyan;
+    color: $dark-lighter-cyan;
+    text-transform: capitalize;
+    font: $font-700;
+    font-size: 20px;
 }
 </style>

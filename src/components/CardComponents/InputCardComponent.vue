@@ -1,20 +1,25 @@
 <template>
     <section class="input-card">
-        <h2>Bill</h2>
-        <input-component name="bill" />
-        <h2>Select Tip %</h2>
-        <section>
-            <button-component
-                v-for="(tip, index) in tipValues"
-                :value="tip.value"
-                :title="tip.name"
-                :key="index"
-                @click="this.handleTips(tip.value)"
-            />
-            <input-component name="custom" />
+        <section class="bills">
+            <h2>Bill</h2>
+            <input-component name="bill" />
         </section>
-        <h2>Number of People</h2>
-        <input-component name="people" />
+        <section class="tips">
+            <h2>Select Tip %</h2>
+            <section class="buttons">
+                <button-component
+                    v-for="(tip, index) in tipValues"
+                    :value="tip.value"
+                    :title="tip.name"
+                    :key="index"
+                    @click="this.handleTips(tip.value)"
+                />
+            </section>
+        </section>
+        <section class="persons">
+            <h2>Number of People</h2>
+            <input-component name="people" />
+        </section>
     </section>
 </template>
 
@@ -43,6 +48,11 @@ const StandardTipValues = [
         name: '50%',
         value: 50,
     },
+
+    {
+        name: 'custom',
+        value: null,
+    },
 ]
 
 export default {
@@ -66,11 +76,32 @@ export default {
 <style scoped lang="scss">
 @import '../../styles/theme.scss';
 
-h2 {
-    font: $font-700;
-    text-transform: capitalize;
-    color: $dark-cyan;
-    margin-bottom: 10px;
-    font-size: 14px;
+.input-card {
+    max-width: 385px;
+    margin: auto 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2 {
+        font: $font-700;
+        text-transform: capitalize;
+        color: $dark-cyan;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .bills {
+        margin-bottom: 35px;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-around;
+        gap: 10px;
+        max-height: 290px;
+        margin-bottom: 35px;
+    }
 }
 </style>

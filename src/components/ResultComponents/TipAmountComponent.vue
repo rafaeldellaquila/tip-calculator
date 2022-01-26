@@ -30,7 +30,12 @@ export default {
 .totalizers {
     font: $font-400;
 
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+
     .title {
+        margin-right: 90px;
         h3 {
             text-transform: capitalize;
             color: white;
