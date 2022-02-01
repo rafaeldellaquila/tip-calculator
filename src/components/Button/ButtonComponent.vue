@@ -36,13 +36,17 @@ button {
     border-radius: 6px;
     text-transform: uppercase;
     font-size: 20px;
+    width: 115px;
+    transition: 0.3s;
+    &:hover {
+        background-color: $color-cyan;
+    }
 }
 
 .tips {
     background-color: $dark-cyan;
     color: $white;
     padding: 8px 30px;
-    max-width: 115px;
 }
 
 .reset {
