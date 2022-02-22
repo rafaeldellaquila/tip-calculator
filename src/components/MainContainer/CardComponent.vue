@@ -261,4 +261,21 @@ export default {
         margin-bottom: 90px;
     }
 }
+
+@media (max-width: $mq-medium) {
+    .main-card {
+        flex-direction: column;
+        max-width: 360px;
+    }
+
+    .result-card {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: $mq-small) {
+    .main-card {
+        margin: 20px;
+    }
+}
 </style>

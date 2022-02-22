@@ -27,12 +27,14 @@ body {
         justify-content: center;
         flex-direction: row;
         align-content: center;
+        overflow: hidden;
 
         main {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
             img {
                 margin-bottom: 60px;
             }
